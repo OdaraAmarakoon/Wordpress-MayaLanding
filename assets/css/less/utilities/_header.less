@@ -1,0 +1,161 @@
+header.main-header {
+    margin-top: 30px;
+    padding: 20px 0px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+
+    .mobile-nav{
+        display: none;
+    }
+
+    .theme-btn2 {
+        display: none; 
+    }
+
+    @media @mobileTab {
+    
+        .mobile-nav {
+            display: block;
+        
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid #fff;
+                width: 50px;
+                height: 50px;
+            }
+        
+            i {
+                color: #fff;
+                font-size: 30px;
+            }
+        }
+
+        .theme-btn2 {
+            display: flex;
+        text-align: center;
+        justify-content: center;
+           
+        } 
+    }
+
+    .sec-menu{
+        margin-top: 20px;
+    }
+
+    .logo-wrapper {
+        img {
+            max-width: 250px;
+            display: block;
+            .transitions();
+
+            @media @mobileTab{
+                // flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media @mobileTab {
+            // flex-direction: column;
+            justify-content: center;
+            justify-content: space-around;
+            
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        
+
+        .menu-wrapper {
+
+            
+            .menu-icon{
+                display: none;
+                position: absolute;
+                right: 20px;
+                top: 45px;
+
+                @media @mobileTab {
+                    display: visible;
+
+                }
+            }
+            .sub-menu {
+                display: none;
+            }
+
+            ul {
+                list-style-type: none;
+
+                li {
+
+                    &:not(:last-child) {
+                        margin-right: 38px;
+
+                        @media @mobileTab {
+                            margin-right: 0px;
+                            margin-bottom: 15px;
+                        }
+                    }
+
+                    a {
+                        color: #FFF;
+                        text-align: center;
+                        font-family: Oswald;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        text-transform: uppercase;
+                    }
+
+                    // &.menu-item-has-children {
+                    //     position: relative;
+
+                    //     >a {
+                    //         &::after {
+                    //             content: '\f078';
+                    //             font-family: "Font Awesome 5 Free";
+                    //             font-weight: 900;
+                    //             margin-left: 10px;
+                    //             .transitions(400ms);
+                    //         }
+                    //     }    
+                    // }
+                }
+            }
+
+            @media @mobileTab {
+                display: none;
+            }
+        }
+
+        .theme-btn {
+            padding: 15px 20px;
+            font-weight: 700;
+            margin-left: 40px;
+            font-size: 13px !important;
+
+            @media @mobileTab {
+                display: none;
+            }
+        }
+
+        
+    }
+    
+}
